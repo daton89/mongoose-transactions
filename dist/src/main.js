@@ -173,7 +173,7 @@ var Transaction = (function () {
                     case 1:
                         _a.sent();
                         _a.label = 2;
-                    case 2: return [4 /*yield*/, mongooseTransactions_collection_1.default.findOneAndUpdate(this.transactionId, {
+                    case 2: return [4 /*yield*/, mongooseTransactions_collection_1.default.findOneAndUpdate({ _id: this.transactionId }, {
                             operations: this.operations,
                             rollbackIndex: this.rollbackIndex
                         })];

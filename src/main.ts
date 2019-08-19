@@ -135,7 +135,7 @@ export default class Transaction {
             await this.createTransaction()
         }
 
-        await Model.findOneAndUpdate(this.transactionId, {
+        await Model.findOneAndUpdate({_id: this.transactionId}, {
             operations: this.operations,
             rollbackIndex: this.rollbackIndex
         })
